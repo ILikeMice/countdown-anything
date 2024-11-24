@@ -22,7 +22,7 @@ function submit() {
     } 
 
     function countdown() {
-        if (document.getElementById("text").innerHTML != "0000:000:00:00:00") {
+        if (!(document.getElementById("text").innerHTML == "0000:000:00:00:00")) {
             var now = new Date()
             var diff = then - now
             var years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365)).toString()
