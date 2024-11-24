@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <script src="odometer.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="odometer-minimal.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Anything!</title>
+</head>
+<body style="margin-top: 30vh; background-color:#F4F4F2;">
+    <div id="inputbox">
+        <label for="inp" class="inp" name="datelabel">
+            <input type="date" id="dateinp" name="dateinp" placeholder="&nbsp;">
+            <span class="label">DD/MM/YYYY</span>
+            <span class="focus-bg"></span>
+        </label>
+        <label for="inp" class="inp">
+            <input type="time" id="timeinp" name="timeinp" placeholder="&nbsp;">
+            <span class="label">Time (hh:mm)</span>
+            <span class="focus-bg"></span>
+        </label>
+        
+        <button type="button" style="position: absolute;" onclick="submit()">Start Countdown!</button>
+    </div>
+    <div id="countdownbox">
+        <span  id="text">0000:000:00:00:00</span>
+    </div>
+</body>
+</html>
