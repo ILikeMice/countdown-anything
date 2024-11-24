@@ -1,3 +1,3 @@
 # Countdown-Anything
 
-- Sets a Countdown to any given date and time.
+- Set a Countdown to any given time and date!
