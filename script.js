@@ -1,5 +1,3 @@
-var running = false
-
 
 window.onload = function() {
     document.getElementById("text").innerHTML = "0000:000:00:00:00";
@@ -8,7 +6,6 @@ window.onload = function() {
 function submit() {
     var date = document.getElementById("dateinp").value
     var time = document.getElementById("timeinp").value
-    
 
     if (date == "" || time == "") {
         alert("Please enter a date and time!")
@@ -24,12 +21,8 @@ function submit() {
         return
     } 
 
-    
-
-    
-
     function countdown() {
-        if (running = true) {
+        if (document.getElementById("text").innerHTML != "0000:000:00:00:00") {
             var now = new Date()
             var diff = then - now
             var years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365)).toString()
@@ -41,7 +34,7 @@ function submit() {
             var minutes = Math.floor(diff / (1000 * 60)).toString()    
             diff -= minutes * (1000 * 60)
             var seconds = Math.floor(diff / 1000).toString()
-
+    
         
             if (0 > (years + days + hours + minutes + seconds).toString()) {
                 return
@@ -53,12 +46,9 @@ function submit() {
             setTimeout(countdown, 1000)
         }
     };
-    if (running == false) {
-        countdown()
-        running = true
-    } else {
-        alert("Countdown already running! Please refresh!")
-    }
+    
+    countdown()
+    document.getElementById("startbtn").style.visibility = "hidden";
     
           
 }
